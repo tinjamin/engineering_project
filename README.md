@@ -32,11 +32,29 @@
 
 * Map
     * Crime map overlayed with ethnic background map 
-    * Crime map overlayed with school map (Emma)
+    * Crime map overlayed with ward map (district) 
+        * Frequency of crime within the ward (ward number) (chloropleth of crime in each ward)
+    * Interact map over zipcode bounded map 
+        * Select data to be points of crime 
+* Scatter plots
+    * Affordable housing correlation with income (more affordable housing = lower income)
+    * Crime map overlayed with school map 
         * Bubble size show number of low income students
         * Color of the bubble become the rating of the school
-    * Crime map overlayed with ward map (district) (Tin)
-        * Frequency of crime within the ward (ward number) (chloropleth of crime in each ward)
-* Scatter plots
 * Histograms
 * Bell curve 
+
+# Tin To-Do 
+    * Crime map overlayed with ward map (district) 
+        * Frequency of crime within the ward (ward number) (chloropleth of crime in each ward)
+    * Interact map over zipcode bounded map 
+        * Select data to be crime
+    * Outline the boundary of community map 
+        * Combine this with the Per Capita Income map (https://data.cityofchicago.org/Health-Human-Services/Per-Capita-Income/r6ad-wvtk)
+            * Check out columns of people without high school diploma 
+
+# Emma To-Do
+    * Crime map overlayed with school map 
+        * Bubble size show number of low income students
+        * Color of the bubble become the rating of the school
+    * Property taxes 
