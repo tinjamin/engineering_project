@@ -45,7 +45,7 @@
 * Bell curve 
 
 # Tin To-Do 
-    * Crime map overlayed with ward map (district) 
+    [x] Crime map overlayed with ward map (district) 
         * Frequency of crime within the ward (ward number) (chloropleth of crime in each ward)
     * Interact map over zipcode bounded map 
         * Select data to be crime
