@@ -2,6 +2,13 @@ import csv
 import plotly.express as px
 import pandas as pd 
 import geojson 
+from ipywidgets import interact
+
+def map_show(column): 
+    fig = px.choropleth_mapbox(pci_df, geojson='https://raw.githubusercontent.com/RandomFractals/ChicagoCrimes/master/data/chicago-community-areas.geojson', featureidkey='properties.area_numbe', locations='Community Area Number', opacity=0.5, center={"lat": 41.8390, "lon": -87.6298}, zoom=10, color=column)
+    fig.update_layout(mapbox_style="open-street-map")
+    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    fig.show()
 
 with open("../../data_set/Per_Capita_Income.csv", "r") as csvfile: 
     csv_reader = csv.reader(csvfile)
@@ -26,6 +33,13 @@ with open("../../data_set/Per_Capita_Income.csv", "r") as csvfile:
 # convert into float
 for i in range(1,len(no_HS_diploma)-1):
     no_HS_diploma[i] = float(no_HS_diploma[i])
+    below_poverty[i] = float(below_poverty[i])
+    housing_crowded[i] = float(housing_crowded[i])
+    unemployment[i] = float(unemployment[i])
+    per_capita_income[i] = float(per_capita_income[i])
+    hardship_index[i] = float(hardship_index[i])
+
+
 
 # creating the dataframe 
 pci_df = pd.DataFrame()
@@ -38,7 +52,5 @@ pci_df['Percent Aged 25+ Without High School Diploma'] = no_HS_diploma[1:-1]
 pci_df['Per Capita Income'] = per_capita_income[1:-1]
 pci_df['Hardship Index'] = hardship_index[1:-1]
 
-fig = px.choropleth_mapbox(pci_df, geojson='https://raw.githubusercontent.com/RandomFractals/ChicagoCrimes/master/data/chicago-community-areas.geojson', featureidkey='properties.area_numbe', locations='Community Area Number', opacity=0.5, center={"lat": 41.8390, "lon": -87.6298}, zoom=10, color='Percent Aged 25+ Without High School Diploma')
-fig.update_layout(mapbox_style="open-street-map")
-fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+# creating the drop down menu
+m = interact(map_show, column=['Percent of Housing Crowded', 'Percent of Households Below Poverty', 'Percent Aged 16+ Unemployed', 'Percent Aged 25+ Without High School Diploma', 'Per Capita Income', 'Hardship Index'])
