@@ -7,7 +7,7 @@ from crimes_chicago import crime_df
 crime_df["lon"] = pd.to_numeric(crime_df["lon"], downcast="float")
 crime_df["lat"] = pd.to_numeric(crime_df["lat"], downcast="float")
 
-fig = px.scatter_mapbox(crime_df, lat="lat", lon="lon", color_discrete_sequence=["fuchsia"])
+fig = px.scatter_mapbox(crime_df, lat="lat", lon="lon", color='ward', hover_name='crime_type')
 fig.update_layout(mapbox_style="open-street-map")
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()

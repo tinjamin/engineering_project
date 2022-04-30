@@ -44,22 +44,20 @@
 * Histograms
 * Bell curve 
 
+# Today - Everything Due Tuesday 5pm
+
+[] Pink form - Project summary (sources, journey, data collection, code walkthrough, and video submission)
+[] Video
+    1. Code walkthrough video (10 minute)
+    2. Demo video (5 minutes)
+[] Project code submission inside folder (big folder)
+[] Green form individual 
+
 # Tin To-Do 
-    * Interact map over zipcode bounded map 
-        * Select data to be crime
+    [] Pie chart break down of each crime type in ward 
     [x] Outline the boundary of community map 
         * Combine this with the Per Capita Income map (https://data.cityofchicago.org/Health-Human-Services/Per-Capita-Income/r6ad-wvtk)
             * Check out columns of people without high school diploma 
-    [x] Crime and income map 
-    [] Residential based map to see if crime is related to tourists area or to actual education 
-        * What we want to see: more residential crime in places where education is less 
-        * Define residential area not including: 
             
 
 # Emma To-Do
-    * Crime map overlayed with school map 
-        * Bubble size show number of low income students
-        * Color of the bubble become the rating of the school
-    * At least two educaitonal related graphs 
-        * Library connection and crime 
-        * Property taxes 
